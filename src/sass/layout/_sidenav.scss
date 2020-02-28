@@ -1,0 +1,12 @@
+.sidenav {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: sticky;
+  top: 0;
+}
+.sidenav.expanded {
+  padding: 0 5rem;
+  width: 17.25vw;
+}
