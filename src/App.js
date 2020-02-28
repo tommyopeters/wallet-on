@@ -1,25 +1,23 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import SideNav from "./components/SideNav";
+import { BrowserRouter as Router, Route } from "react-router-dom";
+import Overview from "./components/Overview";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <React.Fragment>
+        <SideNav />
+        <Route path="/" exact component={Overview} />
+        <Route path="/overview" component={Overview} />
+        <Route path="/activity" component={Overview} />
+        <Route path="/balances" component={Overview} />
+        <Route path="/debit-cards" component={Overview} />
+        <Route path="/history" component={Overview} />
+        <Route path="/invite" component={Overview} />
+        <Route path="/settings" component={Overview} />
+      </React.Fragment>
+    </Router>
   );
 }
 
