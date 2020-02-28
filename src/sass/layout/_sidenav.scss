@@ -1,12 +1,41 @@
 .sidenav {
-  height: 100%;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   position: sticky;
   top: 0;
+  background-color: $background-color-primary-dark;
+  padding: 2rem 0;
+
+  .logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2rem;
+    margin-bottom: 4rem;
+
+    &-icon {
+      width: 6rem;
+      height: 6rem;
+      background-color: white;
+      border-radius: 30%;
+      margin-right: 2rem;
+    }
+
+    &-text {
+      font-size: 3rem;
+      font-weight: 700;
+
+      .wallet {
+        color: #3a3c55;
+      }
+    }
+  }
+  .main-nav {
+    flex-grow: 1;
+  }
 }
 .sidenav.expanded {
-  padding: 0 5rem;
-  width: 17.25vw;
+  width: 20vw;
 }

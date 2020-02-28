@@ -13,12 +13,16 @@ const BalanceCards = props => {
         <div className="transaction-change">
           <div
             className={`percentage ${
-              props.change > 0 ? "positive" : "negative"
+              props.change * 1 > 0 ? "positive" : "negative"
             }`}
           >
-            {props.change}{" "}
+            {props.change}%
           </div>
+          <div className="this-week">this week</div>
         </div>
+      </div>
+      <div className="graph">
+        <img src={props.graph} alt="graph" />
       </div>
     </div>
   );
