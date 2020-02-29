@@ -1,8 +1,7 @@
-import React from 'react';
-import {BrowserRouter as Router, Route} from 'react-router-dom';
-import SideNav from './components/SideNav';
-import Overview from './components/Overview';
-
+import React from "react";
+import { BrowserRouter as Router, Route } from "react-router-dom";
+import SideNav from "./components/SideNav";
+import Overview from "./components/Overview";
 
 function App() {
   return (

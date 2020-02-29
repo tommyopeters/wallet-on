@@ -8,7 +8,7 @@ const BalanceCards = props => {
       </div>
       <div className="transaction-name">{props.name}</div>
       <div className="transaction-details">
-        <div className="transation-value">{props.value}</div>
+        <div className="transaction-value">{props.value}</div>
         <div className="transaction-currency">{props.currency} </div>
         <div className="transaction-change">
           <div

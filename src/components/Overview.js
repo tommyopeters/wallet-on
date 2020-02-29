@@ -2,9 +2,10 @@ import React from "react";
 import Header from "./Header";
 import BalanceCards from "./BalanceCards";
 
+import GraphLine from "../assets/graph-line.png";
 const Overview = () => {
   return (
-    <main>
+    <main className="overview">
       <Header page="Overview" />
       <section className="balances">
         <div className="balances-header">
@@ -20,22 +21,39 @@ const Overview = () => {
             value="2,560.50"
             currency="EUR"
             change="+40"
+            graph={GraphLine}
           />
           <BalanceCards
             name="RO73 BUCU 0623 0545 0883 EUR"
             value="260.50"
             currency="EUR"
             change="-15"
+            graph={GraphLine}
           />
           <BalanceCards
             name="RO41 BUCU O623 4675 6450 RON"
             value="12,560.50"
             currency="RON"
             change="+250"
+            graph={GraphLine}
           />
         </div>
       </section>
-      <section className="account"></section>
+      <section className="account">
+        <section className="money">
+          <div className="debit-cards"></div>
+          <div className="send-money">
+            <h3>Send Money To</h3>
+            <div className="user-list"></div>
+          </div>
+        </section>
+      </section>
+      <section className="activity">
+        <div className="top-section">
+          <i className="fas fa-ellipsis-h"></i>
+        </div>
+        <h3>Activity</h3>
+      </section>
     </main>
   );
 };
