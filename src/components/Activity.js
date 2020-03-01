@@ -1,7 +1,6 @@
 import React from "react";
 
 const Activity = props => {
-  console.log(props);
   return (
     <div className="activity-item">
       <div className="activity-item-icon">

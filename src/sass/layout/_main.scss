@@ -45,7 +45,7 @@
       .balance-card {
         overflow: hidden;
         width: 30%;
-        min-width: 40rem;
+        min-width: 30rem;
         background-color: white;
         border-radius: 2rem;
 
@@ -115,6 +115,108 @@
     display: grid;
     grid-template-columns: 4fr 6fr;
     margin-top: 5rem;
+    gap: 7rem;
+
+    .money {
+      .debit-cards {
+        width: 100%;
+        height: 30rem;
+        background: linear-gradient(to right, #434a67, #2a294c);
+        border-radius: 2rem;
+        .container {
+          display: grid;
+          grid-template-rows: 4rem 1fr;
+          height: 100%;
+          width: 100%;
+          overflow: hidden;
+          border-radius: 2rem;
+          .top-layer {
+            grid-row: 1 / span 2;
+            grid-column: 1/ 2;
+            margin: 1.5rem 2rem 0 2rem;
+            height: 2.5rem;
+            border-radius: 2rem 2rem 0 0;
+            background: linear-gradient(
+              to right,
+              #7dc15a,
+              #5cb382 50%,
+              #39a69f 80%,
+              #3ca5a2
+            );
+
+            .green-gradient {
+            }
+          }
+          .bottom-layer {
+            grid-row: 2 / span 3;
+            grid-column: 1/2;
+            background: linear-gradient(to right, #474670, #292b54);
+            border-radius: 2rem;
+            box-shadow: 0 -0.5rem 3rem rgba(0, 0, 0, 0.781);
+            height: 100%;
+
+            .dashed-outline {
+              margin: 1rem;
+              border-radius: 2rem;
+              border: 0.3rem dashed #3d3e6a;
+              height: 24rem;
+              display: flex;
+              flex-direction: column;
+              justify-content: space-between;
+
+              .blue-gradient {
+                margin: 1rem 1rem 0 1rem;
+                height: 2.5rem;
+                border-radius: 2rem 2rem 0 0;
+                background: linear-gradient(to right, #4a72e5, #64aaf8);
+              }
+              .text {
+                margin: 0 1.5rem 1.5rem 1.5rem;
+                .card-name {
+                  font-size: 2rem;
+                  color: white;
+                }
+              }
+            }
+          }
+        }
+      }
+      .send-money {
+        margin-top: 5rem;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        h3 {
+          margin-bottom: 2rem;
+        }
+        .user-list {
+          display: grid;
+          align-items: center;
+          justify-content: center;
+          gap: 2rem;
+          grid-template-columns: repeat(6, 6rem);
+          &-item {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #0cb467;
+            height: 6rem;
+            width: 6rem;
+            border-radius: 2rem;
+            overflow: hidden;
+
+            img {
+              width: 100%;
+            }
+          }
+          span {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #a5a4b2;
+          }
+        }
+      }
+    }
     .activity {
       background-color: white;
       border-radius: 2.5rem;
@@ -200,9 +302,11 @@
             &-ron {
               color: #73748c;
               font-weight: 700;
-              margin-bottom: 1rem;
+              margin-bottom: 0.3rem;
             }
             &-currency {
+              font-size: 1.6rem;
+              color: #70707070;
             }
           }
         }
@@ -223,6 +327,135 @@
           margin-bottom: 2rem;
           border-radius: 3rem;
           cursor: pointer;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1800px) {
+  #root main {
+  }
+
+  .overview {
+    h3 {
+    }
+    .balances {
+      &-header {
+        .current-week {
+          .fa-calendar {
+          }
+          .fa-angle-down {
+          }
+        }
+      }
+      &-body {
+        .balance-card {
+          .top-section {
+            i {
+            }
+          }
+          .transaction-name {
+          }
+          .transaction-details {
+            .transaction-value {
+            }
+            .transaction-currency {
+            }
+            .transaction-change {
+              .percentage {
+              }
+              .this-week {
+              }
+              .positive {
+              }
+              .negative {
+              }
+            }
+          }
+          .graph {
+            img {
+            }
+          }
+        }
+      }
+    }
+    .account {
+      .money {
+        .debit-cards {
+          .container {
+            .green-gradient {
+            }
+          }
+          .bottom-layer {
+            .dashed-outline {
+              .blue-gradient {
+              }
+              .text {
+                .card-name {
+                }
+              }
+            }
+          }
+        }
+      }
+      .send-money {
+        h3 {
+        }
+        .user-list {
+          &-item {
+            img {
+            }
+          }
+          span {
+          }
+        }
+      }
+    }
+    .activity {
+      .top-section {
+        i {
+        }
+      }
+      h3 {
+      }
+      &-table {
+        .activity-item {
+          &-icon {
+            .fa-cocktail {
+            }
+            .fa-hamburger {
+            }
+            .fa-car {
+            }
+            .fa-sync-alt {
+            }
+          }
+          &-details {
+            .activity-item-name {
+            }
+            .activity-item-status {
+              .pending,
+              .completed {
+              }
+              .pending {
+              }
+              .completed {
+              }
+              .date {
+              }
+            }
+          }
+          &-value {
+            &-ron {
+            }
+            &-currency {
+            }
+          }
+        }
+      }
+      .load-more {
+        span {
         }
       }
     }

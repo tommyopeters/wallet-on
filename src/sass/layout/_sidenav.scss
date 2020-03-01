@@ -13,8 +13,6 @@
     justify-content: center;
     margin-top: 2rem;
     margin-bottom: 4rem;
-    padding-left: 20%;
-    padding-right: 20%;
 
     &-icon {
       width: 6rem;
@@ -279,6 +277,138 @@
         width: 100%;
         text-align: center;
         margin: 0;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1800px) {
+  .sidenav {
+    .logo {
+      &-icon {
+        img {
+        }
+      }
+
+      &-text {
+        .wallet {
+        }
+        .on {
+        }
+      }
+    }
+    .main-nav {
+      &-link {
+        .main-nav-item {
+          &:hover {
+          }
+
+          &-icon {
+          }
+
+          .notif-counter {
+          }
+
+          .four-square {
+            .square {
+            }
+          }
+          .menu-bars {
+            .menu-bar {
+            }
+            .menu-bar-1 {
+            }
+            .menu-bar-3 {
+            }
+          }
+        }
+      }
+      .active-link {
+        .main-nav-item {
+          &-icon {
+          }
+
+          .notif-counter {
+          }
+          .four-square {
+            .square1 {
+            }
+            .square2 {
+            }
+            .square3 {
+            }
+            .square4 {
+            }
+          }
+          .menu-bars {
+            .menu-bar-1 {
+            }
+            .menu-bar-2 {
+            }
+            .menu-bar-3 {
+            }
+          }
+        }
+      }
+    }
+    &-help {
+      .sidenav-help-link {
+        .help {
+          &-icon {
+          }
+        }
+      }
+      .sidenav-collapse {
+        i {
+        }
+      }
+    }
+  }
+
+  .sidenav.expanded {
+    .sidenav-help {
+      .sidenav-help-link {
+        .help {
+          &-icon {
+          }
+        }
+      }
+      .sidenav-collapse {
+        i {
+        }
+      }
+    }
+  }
+
+  .sidenav.collapsed {
+    .logo {
+      &-icon {
+      }
+      &-text {
+      }
+    }
+    .main-nav {
+      &-link {
+        .main-nav-item {
+          &-text {
+          }
+          .notif-counter {
+          }
+        }
+      }
+    }
+    .sidenav-help {
+      .sidenav-help-link {
+        .help {
+          &-icon {
+          }
+          &-text {
+          }
+        }
+      }
+      .sidenav-collapse {
+        i {
+        }
       }
     }
   }
