@@ -1,0 +1,46 @@
+[
+  {
+    "id": 0,
+    "name": "Serv Einsten Pub - Piata Mica",
+    "status": "pending",
+    "date": "2019-07-31T10:08:00.000Z",
+    "ron": "120",
+    "icon": "fas fa-cocktail"
+  },
+  {
+    "id": 1,
+    "name": "Fast Food Yummy Yang",
+    "status": "completed",
+    "date": "2019-07-31T14:39:00.000Z",
+    "ron": "38",
+    "icon": "fas fa-hamburger"
+  },
+  {
+    "id": 2,
+    "name": "Conversion from EUR to RON",
+    "status": "pending",
+    "date": "2019-07-25T23:00:00.000Z",
+    "ron": "+2,352.26",
+    "icon": "fas fa-sync-alt",
+    "nativeValue": "500",
+    "nativeCurrency": "EUR"
+  },
+  {
+    "id": 3,
+    "name": "Rc146 Rompetrol Sibi",
+    "status": "completed",
+    "date": "2019-07-26T10:14:00.000Z",
+    "ron": "428.70",
+    "icon": "fas fa-car",
+    "nativeValue": "91.16",
+    "nativeCurrency": "EUR"
+  },
+  {
+    "id": 4,
+    "name": "Fast Food Yummy Yang",
+    "status": "completed",
+    "date": "2019-07-31T14:39:00.000Z",
+    "ron": "38",
+    "icon": "fas fa-hamburger"
+  }
+]

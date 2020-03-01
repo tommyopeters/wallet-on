@@ -111,4 +111,120 @@
       }
     }
   }
+  .account {
+    display: grid;
+    grid-template-columns: 4fr 6fr;
+    margin-top: 5rem;
+    .activity {
+      background-color: white;
+      border-radius: 2.5rem;
+
+      .top-section {
+        display: flex;
+        justify-content: flex-end;
+        margin-top: 1rem;
+        color: #9d9cac;
+
+        padding: 0 2rem;
+        i {
+          cursor: pointer;
+        }
+      }
+      h3 {
+        padding: 0 3rem;
+        margin-bottom: 3rem;
+      }
+      &-table {
+        padding: 0 3rem;
+        margin-bottom: 4rem;
+        .activity-item {
+          display: flex;
+          margin-bottom: 1rem;
+          font-size: 1.7rem;
+
+          &-icon {
+            font-size: 2rem;
+            padding: 1.5rem;
+            background-color: #f3f2f8;
+            border-radius: 2rem;
+            margin-right: 3.5rem;
+
+            .fa-cocktail {
+              background: linear-gradient(to bottom, #91c7dd, #9b6457);
+              background-clip: text;
+              color: transparent;
+            }
+            .fa-hamburger {
+              background: linear-gradient(to bottom, #eed35d, #f66859);
+              background-clip: text;
+              color: transparent;
+            }
+            .fa-car {
+              color: #f66859;
+            }
+            .fa-sync-alt {
+              color: #9796a6;
+            }
+          }
+          &-details {
+            .activity-item-name {
+              font-weight: 700;
+              margin-bottom: 0.3rem;
+              color: #73748c;
+            }
+            .activity-item-status {
+              font-size: 1.6rem;
+              .pending,
+              .completed {
+                text-transform: capitalize;
+                margin-right: 2rem;
+                font-weight: 700;
+              }
+              .pending {
+                color: #ab9eb0;
+              }
+              .completed {
+                color: #94c7b4;
+              }
+              .date {
+                color: #70707070;
+              }
+            }
+          }
+          &-value {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            flex-grow: 1;
+
+            &-ron {
+              color: #73748c;
+              font-weight: 700;
+              margin-bottom: 1rem;
+            }
+            &-currency {
+            }
+          }
+        }
+      }
+      .load-more {
+        color: #73748c;
+        font-size: 1.6rem;
+        font-weight: 700;
+        width: 100%;
+        padding: 0 3rem;
+        text-align: center;
+
+        span {
+          background-color: #f3f2f8;
+          display: block;
+          width: 100%;
+          padding: 1rem;
+          margin-bottom: 2rem;
+          border-radius: 3rem;
+          cursor: pointer;
+        }
+      }
+    }
+  }
 }

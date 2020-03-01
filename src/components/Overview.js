@@ -1,9 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
 import Header from "./Header";
 import BalanceCards from "./BalanceCards";
 
 import GraphLine from "../assets/graph-line.png";
+import Activities from "../assets/activities.json";
+import ActivityTable from "./ActivityTable";
+
 const Overview = () => {
+  console.log(Activities);
+  const [activities, setActivities] = useState(Activities);
   return (
     <main className="overview">
       <Header page="Overview" />
@@ -11,7 +16,7 @@ const Overview = () => {
         <div className="balances-header">
           <h3>Balances</h3>
           <div className="current-week">
-            <i class="far fa-calendar"></i> Current week
+            <i className="far fa-calendar"></i> Current week
             <i className="fas fa-angle-down"></i>
           </div>
         </div>
@@ -47,12 +52,16 @@ const Overview = () => {
             <div className="user-list"></div>
           </div>
         </section>
-      </section>
-      <section className="activity">
-        <div className="top-section">
-          <i className="fas fa-ellipsis-h"></i>
-        </div>
-        <h3>Activity</h3>
+        <section className="activity">
+          <div className="top-section">
+            <i className="fas fa-ellipsis-h"></i>
+          </div>
+          <h3>Activity</h3>
+          <ActivityTable activities={activities} />
+          <div className="load-more">
+            <span>Load more</span>
+          </div>
+        </section>
       </section>
     </main>
   );
