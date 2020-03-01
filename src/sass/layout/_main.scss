@@ -1,0 +1,463 @@
+#root main {
+  background-color: $background-color-primary;
+  flex-grow: 1;
+  padding: 5rem 8rem;
+}
+
+.overview {
+  h3 {
+    text-transform: uppercase;
+    font-size: 2rem;
+    color: #9d9cac;
+  }
+  .balances {
+    margin-top: 5rem;
+
+    &-header {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 3rem;
+
+      .current-week {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 1rem 2rem;
+        background-color: white;
+        border-radius: 1.3rem;
+        font-size: 2rem;
+        cursor: pointer;
+
+        .fa-calendar {
+          color: #a6a6af;
+          margin-right: 1.5rem;
+        }
+        .fa-angle-down {
+          margin-left: 1.5rem;
+          color: #707070;
+        }
+      }
+    }
+    &-body {
+      display: flex;
+      justify-content: space-between;
+
+      .balance-card {
+        overflow: hidden;
+        width: 30%;
+        min-width: 30rem;
+        background-color: white;
+        border-radius: 2rem;
+
+        .top-section {
+          display: flex;
+          justify-content: flex-end;
+          margin-top: 1rem;
+          color: #9d9cac;
+
+          padding: 0 2rem;
+          i {
+            cursor: pointer;
+          }
+        }
+        .transaction-name {
+          padding: 0 3rem;
+          font-size: 1.8rem;
+          font-weight: bold;
+          color: #9d9cac;
+        }
+        .transaction-details {
+          padding: 0 3rem;
+          margin-top: 2rem;
+          display: flex;
+          .transaction-value {
+            font-size: 4rem;
+            font-weight: bold;
+            color: #2d2a45;
+          }
+          .transaction-currency {
+            font-size: 1.6rem;
+            margin-left: 1rem;
+            color: #9d9cac;
+          }
+          .transaction-change {
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+
+            .percentage {
+              font-size: 1.8rem;
+            }
+            .this-week {
+              font-size: 1.6rem;
+              color: #9d9cac;
+            }
+            .positive {
+              color: #44ab83;
+            }
+            .negative {
+              color: #b46a7b;
+            }
+          }
+        }
+        .graph {
+          width: 100%;
+          img {
+            width: 100%;
+            height: 10rem;
+          }
+        }
+      }
+    }
+  }
+  .account {
+    display: grid;
+    grid-template-columns: 4fr 6fr;
+    margin-top: 5rem;
+    gap: 7rem;
+
+    .money {
+      .debit-cards {
+        width: 100%;
+        height: 30rem;
+        background: linear-gradient(to right, #434a67, #2a294c);
+        border-radius: 2rem;
+        .container {
+          display: grid;
+          grid-template-rows: 4rem 1fr;
+          height: 100%;
+          width: 100%;
+          overflow: hidden;
+          border-radius: 2rem;
+          .top-layer {
+            grid-row: 1 / span 2;
+            grid-column: 1/ 2;
+            margin: 1.5rem 2rem 0 2rem;
+            height: 2.5rem;
+            border-radius: 2rem 2rem 0 0;
+            background: linear-gradient(
+              to right,
+              #7dc15a,
+              #5cb382 50%,
+              #39a69f 80%,
+              #3ca5a2
+            );
+
+            .green-gradient {
+            }
+          }
+          .bottom-layer {
+            grid-row: 2 / span 3;
+            grid-column: 1/2;
+            background: linear-gradient(to right, #474670, #292b54);
+            border-radius: 2rem;
+            box-shadow: 0 -0.5rem 3rem rgba(0, 0, 0, 0.781);
+            height: 100%;
+
+            .dashed-outline {
+              margin: 1rem;
+              border-radius: 2rem;
+              border: 0.3rem dashed #3d3e6a;
+              height: 24rem;
+              display: flex;
+              flex-direction: column;
+              justify-content: space-between;
+
+              .blue-gradient {
+                margin: 1rem 1rem 0 1rem;
+                height: 2.5rem;
+                border-radius: 2rem 2rem 0 0;
+                background: linear-gradient(to right, #4a72e5, #64aaf8);
+              }
+              .text {
+                margin: 0 1.5rem 1.5rem 1.5rem;
+                .card-name {
+                  font-size: 2rem;
+                  color: white;
+                }
+              }
+            }
+          }
+        }
+      }
+      .send-money {
+        margin-top: 5rem;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        h3 {
+          margin-bottom: 2rem;
+        }
+        .user-list {
+          display: grid;
+          align-items: center;
+          justify-content: center;
+          gap: 2rem;
+          grid-template-columns: repeat(6, 6rem);
+          &-item {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #0cb467;
+            height: 6rem;
+            width: 6rem;
+            border-radius: 2rem;
+            overflow: hidden;
+
+            img {
+              width: 100%;
+            }
+          }
+          span {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #a5a4b2;
+          }
+        }
+      }
+    }
+    .activity {
+      background-color: white;
+      border-radius: 2.5rem;
+
+      .top-section {
+        display: flex;
+        justify-content: flex-end;
+        margin-top: 1rem;
+        color: #9d9cac;
+
+        padding: 0 2rem;
+        i {
+          cursor: pointer;
+        }
+      }
+      h3 {
+        padding: 0 3rem;
+        margin-bottom: 3rem;
+      }
+      &-table {
+        padding: 0 3rem;
+        margin-bottom: 4rem;
+        .activity-item {
+          display: flex;
+          margin-bottom: 1rem;
+          font-size: 1.7rem;
+
+          &-icon {
+            font-size: 2rem;
+            padding: 1.5rem;
+            background-color: #f3f2f8;
+            border-radius: 2rem;
+            margin-right: 3.5rem;
+
+            .fa-cocktail {
+              background: linear-gradient(to bottom, #91c7dd, #9b6457);
+              background-clip: text;
+              color: transparent;
+            }
+            .fa-hamburger {
+              background: linear-gradient(to bottom, #eed35d, #f66859);
+              background-clip: text;
+              color: transparent;
+            }
+            .fa-car {
+              color: #f66859;
+            }
+            .fa-sync-alt {
+              color: #9796a6;
+            }
+          }
+          &-details {
+            .activity-item-name {
+              font-weight: 700;
+              margin-bottom: 0.3rem;
+              color: #73748c;
+            }
+            .activity-item-status {
+              font-size: 1.6rem;
+              .pending,
+              .completed {
+                text-transform: capitalize;
+                margin-right: 2rem;
+                font-weight: 700;
+              }
+              .pending {
+                color: #ab9eb0;
+              }
+              .completed {
+                color: #94c7b4;
+              }
+              .date {
+                color: #70707070;
+              }
+            }
+          }
+          &-value {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            flex-grow: 1;
+
+            &-ron {
+              color: #73748c;
+              font-weight: 700;
+              margin-bottom: 0.3rem;
+            }
+            &-currency {
+              font-size: 1.6rem;
+              color: #70707070;
+            }
+          }
+        }
+      }
+      .load-more {
+        color: #73748c;
+        font-size: 1.6rem;
+        font-weight: 700;
+        width: 100%;
+        padding: 0 3rem;
+        text-align: center;
+
+        span {
+          background-color: #f3f2f8;
+          display: block;
+          width: 100%;
+          padding: 1rem;
+          margin-bottom: 2rem;
+          border-radius: 3rem;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1800px) {
+  #root main {
+  }
+
+  .overview {
+    h3 {
+    }
+    .balances {
+      &-header {
+        .current-week {
+          .fa-calendar {
+          }
+          .fa-angle-down {
+          }
+        }
+      }
+      &-body {
+        .balance-card {
+          .top-section {
+            i {
+            }
+          }
+          .transaction-name {
+          }
+          .transaction-details {
+            .transaction-value {
+            }
+            .transaction-currency {
+            }
+            .transaction-change {
+              .percentage {
+              }
+              .this-week {
+              }
+              .positive {
+              }
+              .negative {
+              }
+            }
+          }
+          .graph {
+            img {
+            }
+          }
+        }
+      }
+    }
+    .account {
+      .money {
+        .debit-cards {
+          .container {
+            .green-gradient {
+            }
+          }
+          .bottom-layer {
+            .dashed-outline {
+              .blue-gradient {
+              }
+              .text {
+                .card-name {
+                }
+              }
+            }
+          }
+        }
+      }
+      .send-money {
+        h3 {
+        }
+        .user-list {
+          &-item {
+            img {
+            }
+          }
+          span {
+          }
+        }
+      }
+    }
+    .activity {
+      .top-section {
+        i {
+        }
+      }
+      h3 {
+      }
+      &-table {
+        .activity-item {
+          &-icon {
+            .fa-cocktail {
+            }
+            .fa-hamburger {
+            }
+            .fa-car {
+            }
+            .fa-sync-alt {
+            }
+          }
+          &-details {
+            .activity-item-name {
+            }
+            .activity-item-status {
+              .pending,
+              .completed {
+              }
+              .pending {
+              }
+              .completed {
+              }
+              .date {
+              }
+            }
+          }
+          &-value {
+            &-ron {
+            }
+            &-currency {
+            }
+          }
+        }
+      }
+      .load-more {
+        span {
+        }
+      }
+    }
+  }
+}

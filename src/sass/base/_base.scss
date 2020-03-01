@@ -12,17 +12,11 @@ html {
 
 body {
   box-sizing: border-box;
-  background-color: #f6f6f6;
   font-family: "Lato", sans-serif;
-  font-size: 2rem;
-  position: relative;
-  // overflow: scroll;
+  font-size: 2.2rem;
 }
 #root {
-  width: 100%;
   display: grid;
   grid-template-columns: max-content 1fr;
-}
-.App {
-  width: 100%;
+  position: relative;
 }
