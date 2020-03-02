@@ -11,6 +11,24 @@ class SideNav extends Component {
       expanded: !this.state.expanded
     });
   };
+  componentDidMount() {
+    this.setCollapse();
+    window.addEventListener("resize", e => {
+      this.setCollapse();
+    });
+  }
+  setCollapse = () => {
+    if (window.innerWidth < 1400) {
+      console.log(window);
+      this.setState({
+        expanded: false
+      });
+    } else {
+      this.setState({
+        expanded: true
+      });
+    }
+  };
   render() {
     return (
       <div

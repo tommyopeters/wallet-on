@@ -23,7 +23,8 @@
     "ron": "+2,352.26",
     "icon": "fas fa-sync-alt",
     "nativeValue": "500",
-    "nativeCurrency": "EUR"
+    "nativeCurrency": "EUR",
+    "positive": true
   },
   {
     "id": 3,
